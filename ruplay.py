@@ -1,9 +1,16 @@
 def cargar_mapa(nombre):
 	lista_menor = open(nombre, "r")
 	lista = []
+	v = ""
 	for linea in lista_menor:
 		lista.append(list(linea))
-	return lista
+	for i in lista:
+		for e in lista[i]:
+			if lista[i][e] == 0:
+				v += " "
+			else:
+				v += lista[i,e]
+	return v
 mapa = "mapas/mapa1.txt"
 print (cargar_mapa(mapa))
 

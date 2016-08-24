@@ -20,7 +20,15 @@ class Robot(object):
 		self.rotacion += 1
 		if self.rotacion == 5:
 			self.rotacion = 1
+		if self.rotacion == 1:
+			return ▲
+		elif self.rotacion == 2:
+			return ►
+		elif self.rotacion == 3:
+			return ▼
+		elif self.rotacion == 4:
+			return ◄
 	def Pickear(self):
-		if Hay_ficha(self.x, self.y):
+		if Hay_ficha(self.posicion_x, self.posicion_y):
 			mapa.quitar_ficha(self.x,self.y)
 			self.fichas += 1
