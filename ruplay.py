@@ -5,11 +5,13 @@ def cargar_mapa(nombre):
 	for linea in lista_menor:
 		lista.append(list(linea))
 	for i in lista:
-		for e in lista[i]:
-			if lista[i][e] == 0:
+		for i2 in len(lista[i]):
+			if lista[i][i2] == 0:
 				v += " "
+			elif lista[i][i2] == "\n":
+				v += "\n"
 			else:
-				v += lista[i,e]
+				v += lista[i][i2]
 	return v
 mapa = "mapas/mapa1.txt"
 print (cargar_mapa(mapa))
