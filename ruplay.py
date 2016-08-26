@@ -1,17 +1,20 @@
+import codigo_robot
 def cargar_mapa(nombre):
 	lista_menor = open(nombre, "r")
 	lista = []
 	v = ""
 	for linea in lista_menor:
 		lista.append(list(linea))
-	for i in lista:
-		for i2 in len(lista[i]):
-			if lista[i][i2] == 0:
+	for i in range(len(lista)):
+		for j in range(len(lista[i])):
+			if lista[i][j] == "0":
 				v += " "
-			elif lista[i][i2] == "\n":
+			elif lista[i][j] == "\n":
 				v += "\n"
+			elif lista[i][j] == "*":
+				v += codigo_robot.rotar()
 			else:
-				v += lista[i][i2]
+				v += lista[i][j]
 	return v
 mapa = "mapas/mapa1.txt"
 print (cargar_mapa(mapa))
