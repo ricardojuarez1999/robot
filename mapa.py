@@ -3,6 +3,6 @@ class Mapa(object):
 		self.altura = altura
 		self.ancho = ancho
 		self.fichas = []
+		self.robot = None
+	def mapa(robot):
 		self.robot = robot
-	def quitar_richa(self):
-		
