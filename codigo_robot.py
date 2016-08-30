@@ -5,31 +5,21 @@ class Robot(object):
 		self.rotacion = 0
 		self.mapa = None
 		self.fichas = 0
-	def sumar_en_X(self):
-		if rotacion == 2:
-			self.posicion_x += 1
-		elif rotacion == 4:
-			self.posicion_x -= 1
-	def sumar_en_Y(self):
-		if rotacion == 1:
-			self.posicion_y -= 1
-		elif rotacion == 3:
-			self.posicion_y += 1
+
 	def rotar(self):
-		self.rotacion += 1
-		if self.rotacion == 5:
-			self.rotacion = 1
-		if self.rotacion == 1:
+		self.rotacion = (self.rotacion + 1) % 4
+
+	def dibujar(self):
+		if self.rotacion == 0:
 			return "^"
-		elif self.rotacion == 2:
+		elif self.rotacion == 1:
 			return ">"
-		elif self.rotacion == 3:
+		elif self.rotacion == 2:
 			return "v"
-		elif self.rotacion == 4:
-			return "<"
-	def pickear(self):
-		if Hay_ficha(self.posicion_x, self.posicion_y):
-			mapa.quitar_ficha(self.x,self.y)
-			self.fichas += 1
-	def mapa(mapa):
+		return "<"
+
+	def colocar_en_mapa(self,mapa):
 		self.mapa = mapa
+
+	def recoger_fichas(self,x,y):
+		

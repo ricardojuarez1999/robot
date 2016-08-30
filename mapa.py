@@ -4,5 +4,13 @@ class Mapa(object):
 		self.ancho = ancho
 		self.fichas = []
 		self.robot = None
-	def mapa(robot):
-		self.robot = robot
+
+	def dibujar(self):
+		resultado = ""
+		for y in range(self.altura):
+			for x in range(self.ancho):
+				if fichas.x == x and fichas.y == y:
+
+	def contar_fichas(self,x,y):
+		conteo = 0
+		for 
