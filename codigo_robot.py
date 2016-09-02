@@ -38,4 +38,7 @@ class Robot(object):
 			self.x -= 1
 			if self.x < 0:
 				self.x = 0
-		
+
+	def recoger_fichas(self, x, y):
+		if self.mapa.hay_ficha():
+			self.fichas += 1

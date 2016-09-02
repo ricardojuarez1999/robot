@@ -3,7 +3,6 @@ from mapa import Mapa
 def cargar_mapa(nombre):
 	lista_menor = open(nombre, "r")
 	lista = []
-	robot = Robot(0,0)
 	for linea in lista_menor:
 		lista.append(list(linea))
 	return lista
@@ -14,6 +13,7 @@ def cargar_instrucciones(nombre):
 	for linea in instrucciones:
 		lista_2.append(linea.strip())
 	return lista_2
+
 inst = "instrucciones/instruccion1.txt"
 print (cargar_instrucciones(inst))
 
