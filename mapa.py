@@ -7,11 +7,11 @@ class Mapa(object):
 
 	def dibujar(self):
 		resultado = ""
-		for y in range(len(self.altura)):
-			for x in range(len(self.ancho[y])):
+		for y in range(self.altura):
+			for x in range(self.ancho):
 				if ficha.x == x and ficha.y == y:
 					resultado += ficha
-					self.agegar_ficha(ficha)
+					self.agregar_ficha(ficha)
 				elif robot.x == x and robot.y == y:
 					resultado += robot
 				else:

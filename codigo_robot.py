@@ -1,7 +1,7 @@
 class Robot(object):
-	def __init__(self, posicion_x, posicion_y):
-		self.x	= posicion_x
-		self.y = posicion_y
+	def __init__(self, x, y):
+		self.x	= x
+		self.y = y
 		self.rotacion = 0
 		self.mapa = None
 		self.fichas = 0
