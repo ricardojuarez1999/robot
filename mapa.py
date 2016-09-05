@@ -28,19 +28,19 @@ class Mapa(object):
 	def agregar_ficha(self,ficha):
 		self.fichas.append(ficha)
 
-	def quitar_ficha(self,x,y):
-		for f in fichas:
-			if ficha.x == x and ficha.y == y:
-				self.fichas.pop(ficha)
-				break
-
-	def colocar_robot(self, robot):
+	def asignar_robot(self, robot):
 		self.robot = robot
 
 	def hay_ficha(self, x, y):
 		hay = False
 		for f in fichas:
-			if ficha.x == x and ficha.y == y:
+			if ficha.x == self.robot.x and ficha.y == self.robot.y:
 				hay = True
 				break
 		return  hay
+
+	def quitar_ficha(self,x,y):
+		for f in fichas:
+			if ficha.x == x and ficha.y == y:
+				self.fichas.pop(ficha)
+				break
