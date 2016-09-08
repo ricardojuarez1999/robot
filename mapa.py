@@ -20,7 +20,7 @@ class Mapa(object):
 
 	def conteo_de_fichas(self, x, y):
 		conteo = 0
-		for f in fichas:
+		for f in self.fichas:
 			if ficha.x == x and ficha.y == y:
 				conteo += ficha
 		return conteo
