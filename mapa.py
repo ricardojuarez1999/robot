@@ -5,25 +5,25 @@ class Mapa(object):
 		self.fichas = []
 		self.robot = None
 
+	def conteo_de_fichas(self, x, y):
+		conteo = 0
+		for f in self.fichas:
+			if f.x == x and f.y == y:
+				conteo += 1
+		return conteo
+
 	def dibujar(self):
 		resultado = ""
 		for y in range(self.altura):
 			for x in range(self.ancho):
-				if ficha.x == x and ficha.y == y:
-					resultado += ficha
-					self.agregar_ficha(ficha)
-				elif robot.x == x and robot.y == y:
-					resultado += robot
+				if self.robot.x == x and self.robot.y == y:
+					resultado += self.robot.dibujar()
+				elif self.conteo_de_fichas(x,y) > 0:
+					resultado += str(self.conteo_de_fichas(x,y))
 				else:
 					resultado += " "
 			resultado += "\n"
-
-	def conteo_de_fichas(self, x, y):
-		conteo = 0
-		for f in self.fichas:
-			if ficha.x == x and ficha.y == y:
-				conteo += ficha
-		return conteo
+		return resultado
 
 	def agregar_ficha(self,ficha):
 		self.fichas.append(ficha)
@@ -33,8 +33,8 @@ class Mapa(object):
 
 	def hay_ficha(self, x, y):
 		hay = False
-		for f in fichas:
-			if ficha.x == self.robot.x and ficha.y == self.robot.y:
+		for f in self.fichas:
+			if f.x == self.robot.x and f.y == self.robot.y:
 				hay = True
 				break
 		return  hay

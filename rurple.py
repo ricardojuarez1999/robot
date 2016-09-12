@@ -28,9 +28,11 @@ print (el_mapa.dibujar())
 for i in instrucciones:
 	if i == "MOVER":
 		el_robot.mover()
-	if i == "ROTAR":
+	elif i == "ROTAR":
 		el_robot.rotar()
 	else:
-		el_robot.recoger_ficha()
-	time.sleep(1)
+		el_robot.recoger_fichas(el_robot.x, el_robot.y)
 	print (el_mapa.dibujar())
+	print (el_robot.x)
+	print (el_robot.y)
+	time.sleep(1)
