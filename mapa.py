@@ -39,8 +39,8 @@ class Mapa(object):
 				break
 		return  hay
 
-	def quitar_ficha(self,x,y):
-		for f in fichas:
-			if ficha.x == x and ficha.y == y:
+	def quitar_ficha(self):
+		for ficha in range(len(self.fichas)):
+			if self.fichas[ficha].x == self.robot.x and self.fichas[ficha].y == self.robot.y:
 				self.fichas.pop(ficha)
 				break

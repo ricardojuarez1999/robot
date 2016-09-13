@@ -30,7 +30,7 @@ class Robot(object):
 			self.x += 1
 			if self.x > 79:
 				self.x = 79
-		if self.rotacion == 2:
+		elif self.rotacion == 2:
 			self.y += 1
 			if self.y > 49:
 				self.y = 49

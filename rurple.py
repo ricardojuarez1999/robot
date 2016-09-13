@@ -24,7 +24,6 @@ for y in range(el_mapa.altura):
 			for i in range(cantidad_fichas):
 				la_ficha = Ficha(y,x)
 				el_mapa.agregar_ficha(la_ficha)
-print (el_mapa.dibujar())
 for i in instrucciones:
 	if i == "MOVER":
 		el_robot.mover()
@@ -32,7 +31,7 @@ for i in instrucciones:
 		el_robot.rotar()
 	else:
 		el_robot.recoger_fichas(el_robot.x, el_robot.y)
+		el_mapa.quitar_ficha()
 	print (el_mapa.dibujar())
-	print (el_robot.x)
-	print (el_robot.y)
-	time.sleep(1)
+	print ("fichas recogidas: " ,el_robot.fichas)
+	time.sleep(0.2)
