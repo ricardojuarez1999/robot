@@ -14,4 +14,5 @@ class Navegador(object):
 				print ()
 
 	def mostrar_tab(self):
-		print(self.tabs)
+		for nombre, url in self.tabs:
+			print (nombre, "\t", url)
