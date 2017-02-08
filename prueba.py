@@ -1,5 +1,6 @@
 from navegador import Navegador
 from tab import Tab
+No = 1
 nave = Navegador("nave", 1.0)
 print ("""
 	 _________________________
@@ -13,12 +14,17 @@ print ("""
 	|7.Salir.                |
 	|________________________|
 	""")
-a = int(input("opcion: "))
+a = 0
 while a != 7:
+	a = int(input("opcion: "))
 	if a == 1 :
 		nomb = input("nombre del tab: ")
 		url = input("ingrese la url: ")
-		nave.agregar_tab(nomb,url)
+		nave.agregar_tab(No, nomb,url,)
+		No += 1
 	elif a == 2:
 		print ("que url desea cambiar?")
 		nave.mostrar_tab()
+	elif a == 5:
+		nave.mostrar_tab()
+
